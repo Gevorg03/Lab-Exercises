@@ -5,7 +5,7 @@ You can return the answer in any order."""
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         lst = []
-        for i in range(len(nums)-1):
+        for i in range(len(nums) - 1):
             for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     lst.append(i)
