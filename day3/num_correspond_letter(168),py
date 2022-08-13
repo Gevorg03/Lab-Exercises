@@ -1,0 +1,12 @@
+"""Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet."""
+
+class Solution:
+    def convertToTitle(self, columnNumber: int) -> str:
+        dictionary = dict(zip(range(0,26), string.ascii_uppercase,))
+        s = ""
+        while columnNumber > 0:
+            columnNumber -= 1
+            reminder = columnNumber % 26
+            columnNumber //= 26
+            s = str(dictionary[reminder]) + s
+        return s
